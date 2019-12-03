@@ -2,6 +2,8 @@
 
 This project explains how to create an OpenFin Frameless Window with a custom title-bar.  OpenFin allows you to remove the standard O/S from from a window, however this also reoves the standard window controls normally expected by an end user.  This project includes a custom title bar that returns the controls to the user.
 
+The Project enables the first generation of the OpenFin Layout service.  A child window can be created by clicking on the 'Child Window' button on the main page, which will snap/dock to the parent if dragged adjacent to the window.  The cutom title bar also includes an example 'Undock' button, alternativly the window can be undocke by using the 'CTRL' + 'Shift' + 'u' global hotkey.
+
 ## Installing and running the project
 
 Installing:
@@ -32,12 +34,18 @@ The Minimize example in this project is found in /public/scripts/main.js, it uti
 
 ## Adding a restore button
 
-The Minimize example in this project is found in /public/scripts/main.js, it utilizes the OpenFin API Window.restore() method (https://developer.openfin.co/docs/javascript/stable/tutorial-Window.restore.html)
+The Restore example in this project is found in /public/scripts/main.js, it utilizes the OpenFin API Window.restore() method (https://developer.openfin.co/docs/javascript/stable/tutorial-Window.restore.html)
 
 ## Adding a Maximise button
 
-The Minimize example in this project is found in /public/scripts/main.js, it utilizes the OpenFin API Window.maximize() method (https://developer.openfin.co/docs/javascript/stable/tutorial-Window.maximize.html)
+The Maximise example in this project is found in /public/scripts/main.js, it utilizes the OpenFin API Window.maximize() method (https://developer.openfin.co/docs/javascript/stable/tutorial-Window.maximize.html)
 
 ## Adding a Close button
 
-The Minimize example in this project is found in /public/scripts/main.js, it utilizes the OpenFin API Window.close() method (https://developer.openfin.co/docs/javascript/stable/tutorial-Window.close.html)
+The Close example in this project is found in /public/scripts/main.js, it utilizes the OpenFin API Window.close() method (https://developer.openfin.co/docs/javascript/stable/tutorial-Window.close.html)
+
+## Adding a Undock button
+
+The Undock example in this project is found in /public/scripts/main.js, it utilizes the OpenFin API layouts.snapAndDock.undockWindow() method (https://cdn.openfin.co/docs/services/layouts/1.2.0/api/modules/snapanddock.html#undockwindow).  To enable the Layouts API you either need to build the npm package into your project (see https://github.com/HadoukenIO/layouts-service this is the recomended method), or add the following to your HRML page: `<script src="https://cdn.openfin.co/services/openfin/layouts/1.2.0/openfin-layouts.js"></script>`
+
+The Layouts v1 service has been superceded by a new generation Native OpenFin Layouts, please contact support@openfin.co for more information.
